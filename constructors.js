@@ -65,8 +65,6 @@ function Car(make, model, year){
   this.make = make;
   this.model = model;
   this.year = year;
-  this.move = 0
-
   this.moveCar = function(){
     return this.move += 10;
   }
@@ -90,8 +88,8 @@ function Car(make, model, year){
 
   // Code here
 Movie.prototype.changeRating = function(newRating){
-  updatedRating = (this.rating + newRating) / 2;
-    return this.rating = updatedRating;
+  this.rating = (this.rating + newRating) / 2;
+    return this.rating;
 }
   ////////// PROBLEM 5 //////////
 
@@ -139,4 +137,4 @@ User.prototype.changePostRating = function(id, newRating){
         this.savedPosts[i].rating = newRating;
       }
     }
-}
+}2
